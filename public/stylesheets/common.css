@@ -1,2 +1,10 @@
+html,
+body {
+  width: 1366px !important; }
+
+body {
+  background-color: pink;
+  border: 4px black solid;
+  text-align: center; }
 
 /*# sourceMappingURL=common.css.map */

@@ -1,0 +1,12 @@
+// iPad pro 12.9 landscape default
+// @media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
+
+html,
+body {
+  width: 1366px !important;
+}
+body {
+  background-color: pink;
+  border: 4px black solid;
+  text-align: center;
+}
