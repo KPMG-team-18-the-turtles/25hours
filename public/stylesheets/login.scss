@@ -1,0 +1,234 @@
+body {
+  // background-image: url("/images/bg_blur_temp.png");
+  background-color: rgba(220, 220, 220, 0.927);
+}
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  // background-color: orange;
+  height: 820px;
+  margin-top: (1024-820)/2 + px;
+
+  .header {
+    height: 100px;
+
+    .logo {
+      height: 100%;
+      display: inline-block;
+
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &.kpmg {
+        background-image: url("/images/logo_kpmg.png");
+        width: 200px;
+        margin-right: 20px;
+      }
+
+      &.twofivehours {
+        background-image: url("/images/logo_25hours_temp.png");
+        width: 320px;
+        margin-right: 20px;
+      }
+
+      &.slogan {
+        vertical-align: top;
+        width: 350px;
+
+        p {
+          margin: 22px;
+          // color: white;
+          line-height: 1.2em;
+        }
+      }
+
+      &.theturtles {
+        background-image: url("/images/logo_theturtles.jpg");
+        width: 100px;
+        float: right;
+      }
+    }
+  }
+
+  .content {
+    height: (820 - 100 - 70) + px;
+
+    & > .left,
+    & > .right {
+      display: inline-block;
+      width: 50%;
+      height: 100%;
+    }
+
+    & > .left {
+      float: left;
+      background-image: url("/images/bg5_crop.png");
+      background-size: cover;
+      .bar.whiteBg {
+        width: 6px;
+      }
+    }
+    & > .right {
+      float: right;
+
+      > .title {
+        height: 70px;
+        border-bottom: 1px black solid;
+        h1 {
+          padding-left: 90px;
+          line-height: 70px;
+          font-size: 1.5rem;
+        }
+      }
+      .login {
+        height: 340px;
+
+        form {
+          width: 100%;
+          padding-top: 60px;
+          padding-left: 80px;
+
+          .left {
+            width: 300px;
+            float: left;
+            input {
+              display: block;
+              &[type="text"],
+              &[type="password"] {
+                border: none;
+                border-bottom: 2px solid black;
+                background-color: transparent;
+                height: 60px;
+                width: 250px;
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+                &:focus {
+                  border-color: skyblue;
+                }
+              }
+              &[type="checkbox"] {
+                margin-top: 5px;
+                margin-left: 20px;
+                display: inline-block;
+                transform: scale(1.8);
+                padding: 10px;
+              }
+              > input:placeholder,
+              > label {
+                color: gray;
+                font-weight: bold;
+              }
+            }
+          }
+          .right {
+            > * {
+              cursor: pointer;
+            }
+            button {
+              width: 140px;
+              height: 150px;
+              font-size: 1.4rem;
+              color: white;
+              background-color: skyblue;
+              margin-bottom: 20px;
+              &:hover {
+                background-color: blue;
+              }
+            }
+            div {
+              width: 140px;
+              height: 40px;
+              font-size: 1.2rem;
+              line-height: 42px;
+              text-align: center;
+              display: inline-block;
+              background-color: gray;
+              color: white;
+              &:hover {
+                background-color: darkgray;
+              }
+            }
+          }
+        }
+      }
+      .notice {
+        height: (650 - 70 - 340) + px;
+        background-color: gray;
+        color: white;
+        .inner {
+          padding: 30px 70px 0 70px;
+          .title {
+            padding-bottom: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+          .article {
+            border-bottom: 1px solid white;
+            cursor: pointer;
+            &:hover {
+              color: black;
+              border-color: black;
+            }
+            .date {
+              font-size: 1.1rem;
+              padding-top: 10px;
+            }
+            * {
+              padding-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    height: 70px;
+    display: inline-block;
+    .copyright {
+      width: 400px;
+      line-height: 72px;
+      padding-left: 50px;
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    .link,
+    .empty {
+      margin: 0 10px;
+      height: 100%;
+      float: right;
+      line-height: 72px;
+      padding: 0 10px;
+      &:hover {
+        color: white;
+      }
+    }
+    .link {
+      cursor: pointer;
+      i {
+        font-size: 21px;
+      }
+    }
+    .empty {
+      width: 90px !important;
+    }
+  }
+
+  // rest
+  .bar {
+    float: left;
+    width: 14px;
+    height: 100%;
+    &.skyblue {
+      background-color: skyblue;
+    }
+    &.olive {
+      background-color: olive;
+    }
+  }
+  .whiteBg {
+    background-color: rgba(white, 0.9);
+  }
+}

@@ -4,9 +4,12 @@
 html,
 body {
   width: 1366px !important;
+  min-height: 1024px !important;
+  box-sizing: border-box;
+  * {
+    box-sizing: inherit;
+  }
 }
 body {
-  background-color: pink;
-  border: 4px black solid;
-  text-align: center;
+  border: 1px black dotted;
 }
