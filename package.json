@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=25hours:* nodemon ./bin/www"
+    "start": "DEBUG=25hours:* nodemon ./bin/www",
+    "start:win": "set DEBUG=25hours:* && nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
