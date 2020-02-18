@@ -1,9 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <%- include('./commons/head') %>
+  <head>
+    <%- include('./commons/head') %>
+    <link rel="stylesheet" href="/stylesheets/dashboard.css" />
+  </head>
   <body>
     <%- include('./commons/header') %>
-    <div class="container"></div>
+    <div class="container">
+      <div class="left">
+        <div class="logo"></div>
+        <div class="menu"></div>
+        <div class="clientHead"></div>
+        <div class="clientBody"></div>
+      </div>
+      <div class="right">
+        <div class="top">
+          <div class="clientInfo">
+            <div class="keywords"></div>
+            <div class="sentences"></div>
+          </div>
+          <div class="checklist"></div>
+        </div>
+        <div class="meetingList"></div>
+      </div>
+    </div>
     <%- include('./commons/footer') %>
   </body>
 </html>
+
+<!-- <input type="file" accept="audio/*" capture="microphone" id="recorder" />
+      <audio id="player" controls></audio>
+      <script>
+        var recorder = document.getElementById("recorder");
+        var player = document.getElementById("player");
+
+        recorder.addEventListener("change", function(e) {
+          var file = e.target.files[0];
+          // Do something with the audio file.
+          player.src = URL.createObjectURL(file);
+        });
+      </script> -->

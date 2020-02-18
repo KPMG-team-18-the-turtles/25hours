@@ -1,0 +1,28 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  .left,
+  .right {
+    height: 100%;
+    padding: 30px 0;
+    border: 1px solid;
+  }
+
+  .left {
+    flex: 2;
+    text-align: center;
+    .logo {
+      display: inline-block;
+      width: 100%;
+      height: 90px;
+      background-image: url("/images/logo_25hours_temp.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  .right {
+    flex: 7;
+  }
+}
