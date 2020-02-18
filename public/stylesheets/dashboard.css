@@ -2,8 +2,8 @@
   height: 100%;
   width: 100%;
   display: flex; }
-  .container .left,
-  .container .right {
+  .container > .left,
+  .container > .right {
     height: 100%;
     padding: 30px 0;
     border: 1px solid; }
@@ -17,7 +17,204 @@
       background-image: url("/images/logo_25hours_temp.png");
       background-size: contain;
       background-repeat: no-repeat; }
-  .container .right {
-    flex: 7; }
+    .container .left .menu {
+      margin: 20px 0;
+      display: flex; }
+      .container .left .menu .goToBack {
+        background-color: lightgray;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        width: 90px;
+        height: 50px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center; }
+        .container .left .menu .goToBack .homeIcon {
+          background-image: url("/images/icon_home.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 35px !important;
+          height: 35px !important;
+          margin-right: 20px; }
+      .container .left .menu .recordButton {
+        background-color: red;
+        margin-left: 20px;
+        width: 170px;
+        height: 50px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .container .left .menu .recordButton .recordIcon {
+          background-image: url("/images/icon_mic_white.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 35px !important;
+          height: 35px !important;
+          margin-right: 10px; }
+        .container .left .menu .recordButton .desc {
+          color: white; }
+    .container .left .clientHead {
+      border: 1px solid;
+      margin: 0 auto;
+      height: 250px;
+      width: 100%;
+      text-align: center; }
+      .container .left .clientHead .desc {
+        margin: 10px;
+        font-weight: bold; }
+      .container .left .clientHead .faceImageFrame {
+        height: 200px;
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid olive;
+        border-radius: 50%; }
+        .container .left .clientHead .faceImageFrame .faceImage {
+          width: 97%;
+          height: 97%;
+          background-image: url("/images/face8.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 50%; }
+    .container .left .clientBody {
+      height: 550px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative; }
+      .container .left .clientBody .frame {
+        width: 85%;
+        height: 90%;
+        padding: 20px;
+        background-color: lightgray;
+        border-radius: 20px;
+        display: flex;
+        flex-wrap: wrap; }
+        .container .left .clientBody .frame .wrapper {
+          width: 100%;
+          flex-shrink: 0;
+          text-align: left; }
+          .container .left .clientBody .frame .wrapper label {
+            font-size: 10px; }
+          .container .left .clientBody .frame .wrapper > div {
+            height: 30px;
+            margin-top: 10px;
+            display: flex;
+            align-items: flex-end;
+            border-bottom: 1px black solid; }
+            .container .left .clientBody .frame .wrapper > div div {
+              width: 100%;
+              padding-bottom: 5px;
+              padding-left: 20px; }
+        .container .left .clientBody .frame .wrapper:last-child > div {
+          height: 60px; }
+  .container > .right {
+    flex: 7;
+    background-color: blue;
+    border-top-right-radius: 70px;
+    border-bottom-right-radius: 70px;
+    width: 100%; }
+    .container > .right .top {
+      display: flex;
+      height: 550px;
+      width: 100%; }
+      .container > .right .top .clientInfo {
+        border: 3px solid yellow;
+        flex: 7;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .container > .right .top .clientInfo .frame {
+          height: 90%;
+          width: 90%;
+          background-color: white;
+          border-radius: 20px;
+          border: 3px solid white;
+          position: relative; }
+          .container > .right .top .clientInfo .frame .title {
+            margin: 20px;
+            font-size: 1.4rem;
+            font-weight: bold; }
+          .container > .right .top .clientInfo .frame .keywords {
+            margin: 10px 40px;
+            word-wrap: normal; }
+            .container > .right .top .clientInfo .frame .keywords .keyword {
+              display: inline-block;
+              font-size: 1rem;
+              font-weight: bold;
+              background-color: olive;
+              border-radius: 20px;
+              padding: 10px;
+              margin: 5px;
+              margin-right: 15px; }
+          .container > .right .top .clientInfo .frame .border {
+            border-bottom: 1px solid;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 30px; }
+          .container > .right .top .clientInfo .frame .sentences {
+            padding: 20px 40px; }
+            .container > .right .top .clientInfo .frame .sentences .sentencesDesc {
+              font-size: 0.4rem;
+              padding-bottom: 10px; }
+            .container > .right .top .clientInfo .frame .sentences .sentenceGood,
+            .container > .right .top .clientInfo .frame .sentences .sentenceBad {
+              margin-top: 10px;
+              font-size: 0.6rem;
+              position: relative;
+              min-height: 2.4rem; }
+              .container > .right .top .clientInfo .frame .sentences .sentenceGood > div,
+              .container > .right .top .clientInfo .frame .sentences .sentenceBad > div {
+                background-repeat: no-repeat;
+                background-size: 70%;
+                background-position: center;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 0;
+                right: -20px;
+                border: 1px solid;
+                border-radius: 50%; }
+                .container > .right .top .clientInfo .frame .sentences .sentenceGood > div.thumbupIcon,
+                .container > .right .top .clientInfo .frame .sentences .sentenceBad > div.thumbupIcon {
+                  background-image: url("/images/icon_thumbup.png");
+                  border-color: orangered;
+                  background-color: orangered; }
+                .container > .right .top .clientInfo .frame .sentences .sentenceGood > div.thumbdownIcon,
+                .container > .right .top .clientInfo .frame .sentences .sentenceBad > div.thumbdownIcon {
+                  background-image: url("/images/icon_thumbdown.png");
+                  border-color: skyblue;
+                  background-color: skyblue; }
+      .container > .right .top .checklist {
+        flex: 3;
+        border: 1px solid red;
+        height: 100%; }
+    .container > .right .meetingList {
+      border: 1px solid green;
+      width: 100%;
+      height: 450px; }
+  .container .shareIcon {
+    background-image: url("/images/icon_share.png");
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 40px;
+    right: 40px; }
+  .container .shareIcon2 {
+    background-image: url("/images/icon_share.png");
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 20px;
+    right: 20px; }
 
 /*# sourceMappingURL=dashboard.css.map */

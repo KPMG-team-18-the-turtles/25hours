@@ -3,21 +3,94 @@
   <head>
     <%- include('./commons/head') %>
     <link rel="stylesheet" href="/stylesheets/dashboard.css" />
+    <script>
+      // temp
+      setTimeout(_ => location.reload(), 1000);
+    </script>
   </head>
   <body>
     <%- include('./commons/header') %>
     <div class="container">
       <div class="left">
         <div class="logo"></div>
-        <div class="menu"></div>
-        <div class="clientHead"></div>
-        <div class="clientBody"></div>
+        <div class="menu">
+          <div class="goToBack">
+            <div class="homeIcon"></div>
+          </div>
+          <div class="recordButton">
+            <i class="recordIcon"></i>
+            <div class="desc">
+              RECORDING
+            </div>
+          </div>
+        </div>
+        <div class="clientHead">
+          <div class="desc">My Clients</div>
+          <div class="faceImageFrame">
+            <div class="faceImage"></div>
+          </div>
+        </div>
+        <div class="clientBody">
+          <div class="shareIcon"></div>
+          <div class="frame">
+            <div class="wrapper">
+              <label for="name">Name</label>
+              <div><div>Meg Fletcher</div></div>
+            </div>
+            <div class="wrapper">
+              <label for="Contact">Contact</label>
+              <div><div>82-01-0472-6945</div></div>
+            </div>
+            <div class="wrapper">
+              <label for="Email">Email</label>
+              <div><div>lipilman@naver.com</div></div>
+            </div>
+            <div class="wrapper">
+              <label for="Recent meeting">Recent meeting</label>
+              <div><div>2020/02/16</div></div>
+            </div>
+            <div class="wrapper">
+              <label for="Number of meetings">Number of meetings</label>
+              <div><div>6</div></div>
+            </div>
+            <div class="wrapper">
+              <label for="Position">Position</label>
+              <div><div>LG department of human resources, a personnel manager</div></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="right">
         <div class="top">
           <div class="clientInfo">
-            <div class="keywords"></div>
-            <div class="sentences"></div>
+            <div class="frame">
+              <div class="shareIcon2"></div>
+              <div class="title">Core Keywords</div>
+              <div class="keywords">
+                <span class="keyword">facilities for communication</span>
+                <span class="keyword">budget consultation</span>
+                <span class="keyword">Register for the establishment</span>
+                <span class="keyword">nonprofit organization</span>
+                <span class="keyword">Checking records</span>
+                <span class="keyword">facilities for communication</span>
+                <span class="keyword">facilities for communication</span>
+                <span class="keyword">communication</span>
+                <span class="keyword">facilities for communication</span>
+                <span class="keyword">Checking records</span>
+              </div>
+              <div class="border"></div>
+              <div class="sentences">
+                <div class="sentencesDesc">다음은 고객의 감정이 느껴지는 문장입니다.</div>
+                <div class="sentenceGood">
+                  I like the model I saw last time, so I want to move forward with this contract.
+                  <div class="thumbupIcon"></div>
+                </div>
+                <div class="sentenceBad">
+                  If the terms of the contract are not met in the budget, we should consider investing.
+                  <div class="thumbdownIcon"></div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="checklist"></div>
         </div>
