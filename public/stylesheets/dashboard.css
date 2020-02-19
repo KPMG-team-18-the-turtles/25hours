@@ -123,7 +123,6 @@
       height: 550px;
       width: 100%; }
       .container > .right .top .clientInfo {
-        border: 3px solid yellow;
         flex: 7;
         height: 100%;
         display: flex;
@@ -133,8 +132,7 @@
           height: 90%;
           width: 90%;
           background-color: white;
-          border-radius: 20px;
-          border: 3px solid white;
+          border-radius: 40px;
           position: relative; }
           .container > .right .top .clientInfo .frame .title {
             margin: 20px;
@@ -167,7 +165,8 @@
               margin-top: 10px;
               font-size: 0.6rem;
               position: relative;
-              min-height: 2.4rem; }
+              min-height: 2.4rem;
+              padding-right: 20px; }
               .container > .right .top .clientInfo .frame .sentences .sentenceGood > div,
               .container > .right .top .clientInfo .frame .sentences .sentenceBad > div {
                 background-repeat: no-repeat;
@@ -192,12 +191,109 @@
                   background-color: skyblue; }
       .container > .right .top .checklist {
         flex: 3;
-        border: 1px solid red;
         height: 100%; }
+        .container > .right .top .checklist .frame {
+          padding-top: 100px;
+          width: 100%;
+          height: 100%; }
+          .container > .right .top .checklist .frame .inner {
+            position: relative;
+            width: 90%;
+            height: 94%;
+            background-color: white;
+            border-radius: 40px; }
+            .container > .right .top .checklist .frame .inner .innerDesc {
+              padding: 40px;
+              padding-bottom: 20px;
+              font-size: 1.4rem;
+              font-weight: bold; }
+            .container > .right .top .checklist .frame .inner .wrapper input[type="checkbox"] {
+              margin-top: 5px;
+              margin-left: 20px;
+              display: inline-block;
+              transform: scale(1.8);
+              padding: 10px; }
+            .container > .right .top .checklist .frame .inner .wrapper > div {
+              padding: 15px 10px; }
+              .container > .right .top .checklist .frame .inner .wrapper > div > div {
+                display: inline-block; }
+              .container > .right .top .checklist .frame .inner .wrapper > div:after {
+                content: "";
+                display: block;
+                width: 85%;
+                margin: 0 auto;
+                height: 10px;
+                border-bottom: 1px solid; }
     .container > .right .meetingList {
       border: 1px solid green;
       width: 100%;
       height: 450px; }
+      .container > .right .meetingList .frame {
+        width: 94%;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 40px;
+        height: 90%; }
+        .container > .right .meetingList .frame .inner {
+          padding: 30px; }
+          .container > .right .meetingList .frame .inner .meetingDesc {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 30px; }
+          .container > .right .meetingList .frame .inner .meetings {
+            width: 100%;
+            border: 1px solid;
+            height: 280px;
+            overflow-y: auto;
+            /* &::-webkit-scrollbar {
+              width: 3px;
+              background: none;
+            }
+            &::-webkit-scrollbar-thumb {
+              background: #f8f7fb;
+              opacity: 0.4;
+            }
+            &::-webkit-scrollbar-track {
+              background: none;
+            } */ }
+            .container > .right .meetingList .frame .inner .meetings table {
+              table-layout: fixed;
+              width: 90%; }
+              .container > .right .meetingList .frame .inner .meetings table tr {
+                width: 100%;
+                height: 40px;
+                border-bottom: 1px solid; }
+                .container > .right .meetingList .frame .inner .meetings table tr td:nth-of-type(1) {
+                  padding: 10px;
+                  padding-top: 30px;
+                  width: 10%;
+                  text-align: right; }
+                .container > .right .meetingList .frame .inner .meetings table tr td:nth-of-type(2) {
+                  width: 56%; }
+                .container > .right .meetingList .frame .inner .meetings table tr td:nth-of-type(3),
+                .container > .right .meetingList .frame .inner .meetings table tr td:nth-of-type(4) {
+                  width: 17%; }
+                  .container > .right .meetingList .frame .inner .meetings table tr td:nth-of-type(3) span,
+                  .container > .right .meetingList .frame .inner .meetings table tr td:nth-of-type(4) span {
+                    font-size: 0.8rem;
+                    background-color: gray;
+                    color: white;
+                    border-radius: 10px;
+                    padding: 2px 9px;
+                    margin-right: 15px; }
+                  .container > .right .meetingList .frame .inner .meetings table tr td:nth-of-type(3) div,
+                  .container > .right .meetingList .frame .inner .meetings table tr td:nth-of-type(4) div {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background-repeat: no-repeat;
+                    background-size: cover; }
+                    .container > .right .meetingList .frame .inner .meetings table tr td:nth-of-type(3) div.shareIcon3,
+                    .container > .right .meetingList .frame .inner .meetings table tr td:nth-of-type(4) div.shareIcon3 {
+                      background-image: url("/images/icon_share.png"); }
+                    .container > .right .meetingList .frame .inner .meetings table tr td:nth-of-type(3) div.downloadIcon,
+                    .container > .right .meetingList .frame .inner .meetings table tr td:nth-of-type(4) div.downloadIcon {
+                      background-image: url("/images/icon_download.png"); }
   .container .shareIcon {
     background-image: url("/images/icon_share.png");
     width: 30px;
