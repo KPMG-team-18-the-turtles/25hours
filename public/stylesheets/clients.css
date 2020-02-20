@@ -79,7 +79,8 @@
           background-image: url("/images/face3.jpg");
           background-repeat: no-repeat;
           background-size: contain;
-          border-radius: 50%; }
+          border-radius: 50%;
+          margin-bottom: 15px; }
           .container .frame .recentList .person .face.add {
             background-image: url("/images/logo_plus.png");
             background-position: center center;
@@ -157,8 +158,10 @@
           align-items: center;
           display: flex;
           height: 120px;
-          font-size: 1.4rem;
-          cursor: pointer; }
+          font-size: 1.4rem; }
+          .modal .blur .popup .panel .cancelButton > div,
+          .modal .blur .popup .panel .nextButton > div {
+            cursor: pointer; }
           .modal .blur .popup .panel .cancelButton.cancelButton > div,
           .modal .blur .popup .panel .nextButton.cancelButton > div {
             background-color: gray; }

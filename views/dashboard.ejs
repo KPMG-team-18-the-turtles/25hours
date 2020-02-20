@@ -3,6 +3,7 @@
   <head>
     <%- include('./commons/head') %>
     <link rel="stylesheet" href="/stylesheets/dashboard.css" />
+    <script src="/javascripts/p5.min.js"></script>
   </head>
   <body>
     <%- include('./commons/header') %>
@@ -18,6 +19,7 @@
             <div class="desc">
               RECORDING
             </div>
+            <input type="file" accept="audio/*" capture="microphone" id="recorder" />
           </div>
         </div>
         <div class="clientHead">
@@ -29,6 +31,7 @@
         <div class="clientBody">
           <div class="shareIcon"></div>
           <div class="frame">
+            <div class="deco"></div>
             <div class="wrapper">
               <label for="name">Name</label>
               <div><div>Meg Fletcher</div></div>
@@ -39,7 +42,7 @@
             </div>
             <div class="wrapper">
               <label for="Email">Email</label>
-              <div><div>lipilman@naver.com</div></div>
+              <div><div>reagreh42@gmail.com</div></div>
             </div>
             <div class="wrapper">
               <label for="Recent meeting">Recent meeting</label>
@@ -60,6 +63,7 @@
         <div class="top">
           <div class="clientInfo">
             <div class="frame">
+              <div class="deco"></div>
               <div class="shareIcon2"></div>
               <div class="title">Core Keywords</div>
               <div class="keywords">
@@ -74,21 +78,32 @@
                 <span class="keyword">facilities for communication</span>
                 <span class="keyword">Checking records</span>
               </div>
-              <div class="border"></div>
+            </div>
+            <div class="frame">
+              <div class="deco"></div>
+              <div class="shareIcon2"></div>
+              <div class="title">Point Sentences</div>
+
               <div class="sentences">
-                <div class="sentencesDesc">다음은 고객의 감정이 느껴지는 문장입니다.</div>
-                <div class="sentenceGood">
+                <div class="sentencesDesc">
+                  <div class="sentence">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium</div>
+                  <div class="sentence">aliquam culpa omnis architecto quis dolores doloremque veniam perspiciatis aliquam culpa omnis architecto quis dolores doloremque veniam perspiciatis</div>
+                  <div class="sentence">repellat velit eligendi hic quae exercitationem ad quam ipsum facilis. aliquam culpa omnis architecto quis dolores doloremque veniam perspiciatis</div>
+                </div>
+                <div class="dots"></div>
+                <!-- <div class="sentenceGood">
                   I like the model I saw last time, so I want to move forward with this contract.
                   <div class="thumbupIcon"></div>
                 </div>
                 <div class="sentenceBad">
                   If the terms of the contract are not met in the budget, we should consider investing.
                   <div class="thumbdownIcon"></div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
           <div class="checklist">
+            <div class="deco"></div>
             <div class="frame">
               <div class="inner">
                 <div class="shareIcon2"></div>
@@ -96,23 +111,35 @@
                 <div class="wrapper">
                   <div>
                     <input type="checkbox" />
-                    <div>계약사항 6번 재확인</div>
+                    <input type="text" value="계약사항 6번 재확인" />
                   </div>
                   <div>
                     <input type="checkbox" />
-                    <div>거래 절차 확인</div>
+                    <input type="text" value="거래 절차 확인" />
                   </div>
                   <div>
                     <input type="checkbox" />
-                    <div>수주 금액 확인</div>
+                    <input type="text" value="수주 금액 확인" />
                   </div>
                   <div>
                     <input type="checkbox" />
-                    <div>고객 골프 안부 묻기</div>
+                    <input type="text" value="고객 골프 안부 묻기" />
                   </div>
                   <div>
                     <input type="checkbox" />
-                    <div>재계약확인</div>
+                    <input type="text" value="재계약확인" />
+                  </div>
+                  <div>
+                    <input type="checkbox" />
+                    <input type="text" value="" />
+                  </div>
+                  <div>
+                    <input type="checkbox" />
+                    <input type="text" value="" />
+                  </div>
+                  <div>
+                    <input type="checkbox" />
+                    <input type="text" value="" />
                   </div>
                 </div>
               </div>
@@ -120,6 +147,7 @@
           </div>
         </div>
         <div class="meetingList">
+          <div class="deco"></div>
           <div class="frame">
             <div class="inner">
               <div class="meetingDesc">Meeting List</div>
@@ -127,112 +155,49 @@
                 <table>
                   <tbody>
                     <tr>
-                      <td>#1</td>
-                      <td>20200205 00:54:50</td>
-                      <td class="share">
-                        <span>Share</span>
-                        <div class="shareIcon3"></div>
-                      </td>
-                      <td class="download">
-                        <span>Download</span>
-                        <div class="downloadIcon"></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>#2</td>
-                      <td>20200205 00:54:50</td>
-                      <td class="share">
-                        <span>Share</span>
-                        <div class="shareIcon3"></div>
-                      </td>
-                      <td class="download">
-                        <span>Download</span>
-                        <div class="downloadIcon"></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>#3</td>
-                      <td>20200205 00:54:50</td>
-                      <td class="share">
-                        <span>Share</span>
-                        <div class="shareIcon3"></div>
-                      </td>
-                      <td class="download">
-                        <span>Download</span>
-                        <div class="downloadIcon"></div>
-                      </td>
+                      <td>Number</td>
+                      <td>Created At</td>
+                      <td>Recording Time</td>
+                      <td>Place</td>
+                      <td>Share</td>
+                      <td>Audio</td>
+                      <td>Script</td>
                     </tr>
                     <tr>
                       <td>#4</td>
-                      <td>20200205 00:54:50</td>
-                      <td class="share">
-                        <span>Share</span>
-                        <div class="shareIcon3"></div>
-                      </td>
-                      <td class="download">
-                        <span>Download</span>
-                        <div class="downloadIcon"></div>
-                      </td>
+                      <td>Feb 20,2020 - 12:42 PM</td>
+                      <td>00:54:50</td>
+                      <td class="placeIcon"></td>
+                      <td class="shareIcon3"></td>
+                      <td class="audioIcon"></td>
+                      <td class="scriptIcon"></td>
                     </tr>
                     <tr>
-                      <td>#5</td>
-                      <td>20200205 00:54:50</td>
-                      <td class="share">
-                        <span>Share</span>
-                        <div class="shareIcon3"></div>
-                      </td>
-                      <td class="download">
-                        <span>Download</span>
-                        <div class="downloadIcon"></div>
-                      </td>
+                      <td>#3</td>
+                      <td>Feb 18,2020 - 14:20 PM</td>
+                      <td>00:52:40</td>
+                      <td class="placeIcon"></td>
+                      <td class="shareIcon3"></td>
+                      <td class="audioIcon"></td>
+                      <td class="scriptIcon"></td>
                     </tr>
                     <tr>
-                      <td>#6</td>
-                      <td>20200205 00:54:50</td>
-                      <td class="share">
-                        <span>Share</span>
-                        <div class="shareIcon3"></div>
-                      </td>
-                      <td class="download">
-                        <span>Download</span>
-                        <div class="downloadIcon"></div>
-                      </td>
+                      <td>#2</td>
+                      <td>Feb 12,2020 - 12:09 PM</td>
+                      <td>00:49:41</td>
+                      <td class="placeIcon"></td>
+                      <td class="shareIcon3"></td>
+                      <td class="audioIcon"></td>
+                      <td class="scriptIcon"></td>
                     </tr>
                     <tr>
-                      <td>#7</td>
-                      <td>20200205 00:54:50</td>
-                      <td class="share">
-                        <span>Share</span>
-                        <div class="shareIcon3"></div>
-                      </td>
-                      <td class="download">
-                        <span>Download</span>
-                        <div class="downloadIcon"></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>#8</td>
-                      <td>20200205 00:54:50</td>
-                      <td class="share">
-                        <span>Share</span>
-                        <div class="shareIcon3"></div>
-                      </td>
-                      <td class="download">
-                        <span>Download</span>
-                        <div class="downloadIcon"></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>#9</td>
-                      <td>20200205 00:54:50</td>
-                      <td class="share">
-                        <span>Share</span>
-                        <div class="shareIcon3"></div>
-                      </td>
-                      <td class="download">
-                        <span>Download</span>
-                        <div class="downloadIcon"></div>
-                      </td>
+                      <td>#1</td>
+                      <td>Feb 10,2020 - 16:40 PM</td>
+                      <td>00:49:49</td>
+                      <td class="placeIcon"></td>
+                      <td class="shareIcon3"></td>
+                      <td class="audioIcon"></td>
+                      <td class="scriptIcon"></td>
                     </tr>
                   </tbody>
                 </table>
@@ -242,19 +207,40 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const recorder = document.getElementsByClassName("recordButton")[0];
+      recorder.addEventListener("change", function(e) {
+        var file = e.target.files[0];
+        console.log(file);
+        sendToServer(file, "/record");
+      });
+      function sendToServer(blob, url, name = "audio") {
+        var formData = new FormData();
+        formData.append(name, blob);
+        console.log(formData);
+        $.ajax({
+          url: url,
+          type: "post",
+          data: formData,
+          contentType: false,
+          processData: false,
+          cache: false,
+          success: function(data) {
+            console.log(data);
+          },
+          error: function(data) {
+            console.log(data);
+          }
+        });
+      }
+    </script>
+
     <%- include('./commons/footer') %>
+    <script>
+      $(".goToBack").click(() => window.history.back());
+    </script>
   </body>
 </html>
 
-<!-- <input type="file" accept="audio/*" capture="microphone" id="recorder" />
-      <audio id="player" controls></audio>
-      <script>
-        var recorder = document.getElementById("recorder");
-        var player = document.getElementById("player");
-
-        recorder.addEventListener("change", function(e) {
-          var file = e.target.files[0];
-          // Do something with the audio file.
-          player.src = URL.createObjectURL(file);
-        });
-      </script> -->
+<!-- -->
