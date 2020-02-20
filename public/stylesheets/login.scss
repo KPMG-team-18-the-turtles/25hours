@@ -1,6 +1,7 @@
+@import "variables";
+
 body {
   // background-image: url("/images/bg_blur_temp.png");
-  background-color: rgba(220, 220, 220, 0.927);
 }
 .container {
   margin: 0 auto;
@@ -20,15 +21,16 @@ body {
       background-size: cover;
 
       &.kpmg {
-        background-image: url("/images/logo_kpmg.png");
+        background-image: url("/images/logo_kpmg_reverse.png");
         width: 200px;
-        margin-right: 20px;
       }
 
       &.twofivehours {
-        background-image: url("/images/logo_25hours_temp.png");
-        width: 320px;
+        background-image: url("/images/logo_25hours2.png");
+        background-size: contain;
+        width: 287px;
         margin-right: 20px;
+        background-position-y: 10px;
       }
 
       &.slogan {
@@ -36,16 +38,19 @@ body {
         width: 350px;
 
         p {
+          color: white;
           margin: 22px;
-          // color: white;
           line-height: 1.2em;
         }
       }
 
       &.theturtles {
-        background-image: url("/images/logo_theturtles.jpg");
+        background-image: url("/images/logo_theturtles.png");
+        background-size: 100%;
+        background-position-y: 30px;
         width: 100px;
         float: right;
+        margin-right: 20px;
       }
     }
   }
@@ -64,19 +69,31 @@ body {
       float: left;
       background-image: url("/images/bg5_crop.png");
       background-size: cover;
-      .bar.whiteBg {
-        width: 6px;
-      }
     }
     & > .right {
       float: right;
-
+      .bar.whiteBg {
+        width: 6px;
+      }
       > .title {
         height: 70px;
         border-bottom: 1px black solid;
-        h1 {
+        position: relative;
+
+        .iconLogin {
+          display: inline-block;
+          background-image: url("/images/icon_login.png");
+          background-size: contain;
+          position: absolute;
+
+          top: 18px;
+          left: 50px;
+          width: 37px;
+          height: 35px;
+        }
+        div {
           padding-left: 90px;
-          line-height: 70px;
+          line-height: 76px;
           font-size: 1.5rem;
         }
       }
@@ -124,28 +141,42 @@ body {
             > * {
               cursor: pointer;
             }
-            button {
-              width: 140px;
+            button#loginBtn {
+              width: 150px;
               height: 150px;
+              border-radius: 30px;
               font-size: 1.4rem;
               color: white;
-              background-color: skyblue;
+              background-color: $color-green;
               margin-bottom: 20px;
               &:hover {
-                background-color: blue;
+                background-color: rgba($color-green, 0.7);
               }
             }
-            div {
-              width: 140px;
+            #unlockBtn {
+              width: 150px;
               height: 40px;
-              font-size: 1.2rem;
+              border-radius: 30px;
+              font-size: 1rem;
               line-height: 42px;
               text-align: center;
               display: inline-block;
-              background-color: gray;
+              background-color: $color-darkblue;
               color: white;
+              position: relative;
+              .iconUnlock {
+                background-image: url("/images/icon_unlock.png");
+                display: inline-block;
+                background-size: contain;
+                position: absolute;
+
+                top: 6px;
+                right: 108px;
+                width: 28px;
+                height: 28px;
+              }
               &:hover {
-                background-color: darkgray;
+                background-color: rgba($color-darkblue, 0.7);
               }
             }
           }
@@ -153,25 +184,40 @@ body {
       }
       .notice {
         height: (650 - 70 - 340) + px;
-        background-color: gray;
+        background-color: $color-darkblue;
         color: white;
         .inner {
           padding: 30px 70px 0 70px;
           .title {
             padding-bottom: 10px;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-weight: bold;
+            position: relative;
+            .iconNotice {
+              position: absolute;
+              left: -10px;
+              top: -10px;
+              background-image: url("/images/icon_notice.png");
+              background-size: cover;
+              background-repeat: no-repeat;
+              display: inline-block;
+              width: 40px;
+              height: 40px;
+            }
           }
           .article {
             border-bottom: 1px solid white;
             cursor: pointer;
             &:hover {
-              color: black;
-              border-color: black;
+              color: rgba(white, 0.7);
+              border-color: rgba(white, 0.7);
             }
             .date {
               font-size: 1.1rem;
               padding-top: 10px;
+            }
+            .headline {
+              font-size: 0.8rem;
             }
             * {
               padding-bottom: 5px;
@@ -187,7 +233,7 @@ body {
     height: 70px;
     display: inline-block;
     .copyright {
-      width: 500px;
+      width: 700px;
       line-height: 72px;
       padding-left: 50px;
       vertical-align: middle;
@@ -202,7 +248,7 @@ body {
       line-height: 72px;
       padding: 0 10px;
       &:hover {
-        color: white;
+        color: rgba(black, 0.5);
       }
     }
     .link {
@@ -221,14 +267,26 @@ body {
     float: left;
     width: 14px;
     height: 100%;
-    &.skyblue {
-      background-color: skyblue;
+    &.green {
+      background-color: $color-green;
     }
     &.olive {
       background-color: olive;
     }
   }
   .whiteBg {
-    background-color: rgba(white, 0.9);
+    background-color: white;
+  }
+  > .content {
+    .left {
+      border-top-left-radius: 70px;
+    }
+    > .right > .title {
+      border-top-right-radius: 70px;
+    }
+  }
+  > .footer {
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
   }
 }

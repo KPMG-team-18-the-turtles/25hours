@@ -1,15 +1,40 @@
-// iPad pro 12.9 landscape default
-// @media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
+@import "variables";
+@font-face {
+  font-family: rix;
+  src: url("/fonts/rix_m.wof") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 html,
 body {
   width: 1366px !important;
   height: 1024px !important;
   box-sizing: border-box;
-  * {
-    box-sizing: inherit;
-  }
+}
+html *,
+body * {
+  font-family: rix;
+  box-sizing: inherit;
+}
+html {
+  background-color: white;
 }
 body {
-  border: 1px black dotted;
+  background-color: $color-blue;
+  border-radius: 70px;
+}
+input {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.shadow {
+  box-shadow: 1px 1px 1px 1px rgba(gray, 0.3);
+}
+input[type="text"]:focus {
+  border-color: $color-blue !important;
+}
+// temp
+body {
+  // border: 1px red dotted;
 }

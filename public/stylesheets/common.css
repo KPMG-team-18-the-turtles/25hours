@@ -1,13 +1,35 @@
+@font-face {
+  font-family: rix;
+  src: url("/fonts/rix_m.wof") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 html,
 body {
   width: 1366px !important;
   height: 1024px !important;
   box-sizing: border-box; }
-  html *,
-  body * {
-    box-sizing: inherit; }
+
+html *,
+body * {
+  font-family: rix;
+  box-sizing: inherit; }
+
+html {
+  background-color: white; }
 
 body {
-  border: 1px black dotted; }
+  background-color: #0173bb;
+  border-radius: 70px; }
+
+input {
+  -webkit-border-radius: 0;
+  border-radius: 0; }
+
+.shadow {
+  box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.3); }
+
+input[type="text"]:focus {
+  border-color: #0173bb !important; }
 
 /*# sourceMappingURL=common.css.map */

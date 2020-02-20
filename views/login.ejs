@@ -4,9 +4,10 @@
     <%- include('./commons/head') %>
     <!-- <link rel="stylesheet" href="/stylesheets/debug.css" /> -->
     <link rel="stylesheet" href="/stylesheets/login.css" />
+    <link rel="stylesheet" type="text/css" href="http://api.typolink.co.kr/css?family=RixGo+L:400|RixGo+M:400|RixGo+B:400|RixGo+EB:400" />​
   </head>
   <body>
-    <%- include('./commons/header') %>
+    <!-- <%- include('./commons/header') %> -->
     <div class="container">
       <div class="header">
         <div class="logo kpmg"></div>
@@ -18,12 +19,12 @@
       </div>
       <div class="content">
         <div class="left">
-          <div class="bar skyblue"></div>
-          <div class="bar whiteBg"></div>
+          <!-- <div class="bar whiteBg"></div> -->
         </div>
         <div class="right">
+          <div class="bar green"></div>
           <div class="title whiteBg">
-            <h1>MEMBER LOGIN</h1>
+            <div><span class="iconLogin"></span> MEMBER LOGIN</div>
           </div>
           <div class="login whiteBg">
             <form method="POST" action="login">
@@ -34,34 +35,38 @@
                 <label for="autologin">아이디 저장</label>
               </div>
               <div class="right">
-                <button type="submit" id="loginBtn">LOGIN</button>
-                <div id="unlockBtn">UNLOCK ID</div>
+                <button type="submit" class="shadow" id="loginBtn">LOGIN</button>
+                <div id="unlockBtn" class="shadow">
+                  <div class="iconUnlock"> </div>
+                  &nbsp; &nbsp;&nbsp;&nbsp; UNLOCK ID</div
+                >
               </div>
             </form>
           </div>
           <div class="notice">
             <div class="inner">
               <div class="title">
-                공지사항
+                <div class="iconNotice"></div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 공지사항
               </div>
               <div class="article">
-                <div class="date">2020.02.08</div>
-                <div class="headline">KPMG건물 내 코로나 바이러스 대비 소독 안내(02/08 토요일)</div>
+                <div class="date">2020.02.19</div>
+                <div class="headline">美, 고강도 중국 압박…화웨이에 반도체 장비 공급도 막는다</div>
               </div>
               <div class="article">
-                <div class="date">2020.01.19</div>
-                <div class="headline">2020 League Table Awards ‘Best M&A Buyer’ 수상</div>
+                <div class="date">2020.02.19</div>
+                <div class="headline">코로나19 세계경제 강타…"韓, 중간재 생산 역량 강화 필요"</div>
               </div>
               <div class="article">
-                <div class="date">2020.01.17</div>
-                <div class="headline">CES 2020, ‘인공지능을 우리의 일상으로’</div>
+                <div class="date">2020.02.19</div>
+                <div class="headline">무디스 "코로나19 확산에 韓 GDP 1.9%로 하향"</div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="footer whiteBg">
-        <div class="bar olive"></div>
+        <!-- <div class="bar olive"></div> -->
         <div class="copyright">
           <p>COPYRIGHT (C) KPMG. ALL RIGHTS RESERVED</p>
         </div>
@@ -73,14 +78,6 @@
           <p>개인정보처리방침 <i>&rsaquo;</i></p>
         </div>
       </div>
-
-      <!-- <p>로그인</p>
-      <form action="login" method="POST">
-        <input type="text" name="id" />
-        <input type="password" name="pw" />
-        <button type="submit">로그인</button>
-        <p>테스트<p>
-      </p> -->
     </div>
     <%- include('./commons/footer') %>
   </body>
