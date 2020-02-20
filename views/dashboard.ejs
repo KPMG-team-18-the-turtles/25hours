@@ -212,13 +212,11 @@
       const recorder = document.getElementsByClassName("recordButton")[0];
       recorder.addEventListener("change", function(e) {
         var file = e.target.files[0];
-        console.log(file);
         sendToServer(file, "/record");
       });
       function sendToServer(blob, url, name = "audio") {
         var formData = new FormData();
         formData.append(name, blob);
-        console.log(formData);
         $.ajax({
           url: url,
           type: "post",
@@ -227,10 +225,10 @@
           processData: false,
           cache: false,
           success: function(data) {
-            console.log(data);
+            alert("녹음파일 등록이 완료되었습니다.");
           },
           error: function(data) {
-            console.log(data);
+            alert("녹음파일 등록이 실패했습니다.");
           }
         });
       }
@@ -238,7 +236,7 @@
 
     <%- include('./commons/footer') %>
     <script>
-      $(".goToBack").click(() => window.history.back());
+      $(".goToBack").click(() => (window.location.href = "clients"));
     </script>
   </body>
 </html>
