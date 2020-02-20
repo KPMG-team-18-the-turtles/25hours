@@ -8,7 +8,7 @@ body {
   width: 1200px;
   // background-color: orange;
   height: 820px;
-  margin-top: (1024-820)/2 + px;
+  padding-top: (1024-820)/2 - 20 + px;
 
   .header {
     height: 100px;

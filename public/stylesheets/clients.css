@@ -1,5 +1,7 @@
 .container {
   border-radius: 50px;
+  background-image: url("/images/bg8.jpg");
+  background-size: cover;
   width: 100%;
   height: 100%;
   padding-top: 50px; }
@@ -17,6 +19,7 @@
       justify-content: start;
       align-items: center; }
       .container .title .homeIconFrame .homeIcon {
+        cursor: pointer;
         background-image: url("/images/icon_home.png");
         background-repeat: no-repeat;
         background-size: contain;
@@ -25,7 +28,7 @@
         margin-left: 30px; }
     .container .title .logo {
       flex: 2;
-      background-image: url("/images/logo_25hours_temp.png");
+      background-image: url("/images/logo_25hours.png");
       background-repeat: no-repeat;
       background-size: contain;
       width: 400px;
@@ -37,12 +40,19 @@
     width: 90%;
     margin: 0 auto;
     height: 800px;
-    margin-top: 50px; }
+    margin-top: 100px; }
     .container .frame .label {
       font-weight: bold;
       font-size: 1.2rem;
+      letter-spacing: 4px;
       color: white;
       margin: 20px 0; }
+    .container .frame .recentList.small > .person {
+      margin-right: 00px;
+      height: 140px; }
+      .container .frame .recentList.small > .person .face {
+        width: 120px;
+        height: 120px; }
     .container .frame .recentList.small > .person:nth-child(1) {
       margin-left: 40px; }
     .container .frame .recentList.big {
@@ -52,7 +62,7 @@
         margin-right: 0; }
     .container .frame .recentList {
       overflow-y: auto;
-      min-height: 250px;
+      min-height: 150px;
       max-height: 440px;
       display: flex;
       flex-wrap: wrap;
@@ -71,7 +81,7 @@
           background-size: contain;
           border-radius: 50%; }
           .container .frame .recentList .person .face.add {
-            background-image: url("/images/icon_plus_temp.png");
+            background-image: url("/images/logo_plus.png");
             background-position: center center;
             background-color: white; }
             .container .frame .recentList .person .face.add + .name {
@@ -83,5 +93,119 @@
           margin-top: 5px;
           color: white;
           font-weight: bold; }
+
+.modal {
+  position: absolute;
+  width: 1366px !important;
+  height: 1024px !important;
+  border-radius: 50px;
+  top: 0;
+  left: 0; }
+  .modal .blur {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: rgba(128, 128, 128, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .modal .blur .popup {
+      width: 500px;
+      height: 650px;
+      background-color: white;
+      border-radius: 50px;
+      position: relative; }
+      .modal .blur .popup .logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 110px;
+        height: 40px;
+        background-image: url("/images/logo_25hours.png");
+        background-size: contain;
+        background-repeat: no-repeat; }
+      .modal .blur .popup .title {
+        height: 60px;
+        font-size: 1.8rem;
+        text-align: center;
+        margin-top: 30px; }
+      .modal .blur .popup .panel {
+        display: flex; }
+        .modal .blur .popup .panel > div {
+          flex-basis: 50%; }
+        .modal .blur .popup .panel .left .face {
+          width: 200px;
+          height: 200px;
+          margin: 0 auto;
+          background-size: contain;
+          border-radius: 50%; }
+        .modal .blur .popup .panel .right > div {
+          min-height: 70px;
+          width: 220px; }
+          .modal .blur .popup .panel .right > div .label {
+            color: gray;
+            padding-bottom: 10px; }
+          .modal .blur .popup .panel .right > div .content {
+            font-size: 1.1rem;
+            padding-left: 20px;
+            padding-right: 10px;
+            border-bottom: 1px solid; }
+        .modal .blur .popup .panel .cancelButton,
+        .modal .blur .popup .panel .nextButton {
+          flex-basis: 50%;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          height: 120px;
+          font-size: 1.4rem;
+          cursor: pointer; }
+          .modal .blur .popup .panel .cancelButton.cancelButton > div,
+          .modal .blur .popup .panel .nextButton.cancelButton > div {
+            background-color: gray; }
+          .modal .blur .popup .panel .cancelButton.nextButton > div,
+          .modal .blur .popup .panel .nextButton.nextButton > div {
+            background-color: #00aca6; }
+          .modal .blur .popup .panel .cancelButton > div,
+          .modal .blur .popup .panel .nextButton > div {
+            color: white;
+            width: 150px;
+            height: 50px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+
+.face1 {
+  background-image: url("/images/face1.jpg") !important; }
+
+.face2 {
+  background-image: url("/images/face2.jpg") !important; }
+
+.face3 {
+  background-image: url("/images/face3.jpg") !important; }
+
+.face4 {
+  background-image: url("/images/face4.jpg") !important; }
+
+.face5 {
+  background-image: url("/images/face5.jpg") !important; }
+
+.face6 {
+  background-image: url("/images/face6.jpg") !important; }
+
+.face7 {
+  background-image: url("/images/face7.jpg") !important; }
+
+.face8 {
+  background-image: url("/images/face8.jpg") !important; }
+
+.face9 {
+  background-image: url("/images/face9.jpg") !important; }
+
+.person {
+  cursor: pointer; }
+
+.disable {
+  visibility: hidden; }
 
 /*# sourceMappingURL=clients.css.map */

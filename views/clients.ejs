@@ -23,55 +23,114 @@
         <div class="label">RECENT</div>
         <div class="recentList small">
           <div class="person">
-            <div class="face"></div>
+            <div class="face face1"></div>
             <div class="name">Meg Fletcher</div>
           </div>
           <div class="person">
-            <div class="face"></div>
-            <div class="name">Meg Fletcher</div>
+            <div class="face face2"></div>
+            <div class="name">Camille Villalobos</div>
           </div>
           <div class="person">
-            <div class="face"></div>
-            <div class="name">Meg Fletcher</div>
+            <div class="face face3"></div>
+            <div class="name">Sherren Ireland</div>
           </div>
         </div>
         <div class="label">CLIENTS</div>
         <div class="recentList big">
           <div class="person">
-            <div class="face"></div>
+            <div class="face face1"></div>
             <div class="name">Meg Fletcher</div>
           </div>
           <div class="person">
-            <div class="face"></div>
-            <div class="name">Meg Fletcher</div>
+            <div class="face face5"></div>
+            <div class="name">Roshan Park</div>
           </div>
           <div class="person">
-            <div class="face"></div>
-            <div class="name">Meg Fletcher</div>
+            <div class="face face2"></div>
+            <div class="name">Camille Villalobos</div>
           </div>
           <div class="person">
-            <div class="face"></div>
-            <div class="name">Meg Fletcher</div>
+            <div class="face face9"></div>
+            <div class="name">Ayrton Clements</div>
           </div>
           <div class="person">
-            <div class="face"></div>
-            <div class="name">Meg Fletcher</div>
+            <div class="face face6"></div>
+            <div class="name">Abul Foster</div>
           </div>
           <div class="person">
-            <div class="face"></div>
-            <div class="name">Meg Fletcher</div>
+            <div class="face face7"></div>
+            <div class="name">Kyron Ventura</div>
           </div>
           <div class="person">
-            <div class="face"></div>
-            <div class="name">Meg Fletcher</div>
+            <div class="face face6"></div>
+            <div class="name">Sherren Ireland</div>
           </div>
           <div class="person">
             <div class="face add"></div>
-            <div class="name">Meg Fletcher</div>
+            <div class="name"></div>
           </div>
         </div>
       </div>
     </div>
     <%- include('./commons/footer') %>
+    <div class="modal disable">
+      <div class="blur">
+        <div class="popup">
+          <div class="logo"></div>
+          <div class="title">My Clients</div>
+          <div class="panel">
+            <div class="left">
+              <div class="face face1"></div>
+            </div>
+            <div class="right">
+              <div>
+                <div class="label">name</div>
+                <div class="content">Meg Fletcher</div>
+              </div>
+              <div>
+                <div class="label">Contact</div>
+                <div class="content">82-01-0472-6945</div>
+              </div>
+              <div>
+                <div class="label">Email</div>
+                <div class="content">reagreh42@gmail.com</div>
+              </div>
+              <div>
+                <div class="label">Recent meeting</div>
+                <div class="content">2020/02/16</div>
+              </div>
+              <div>
+                <div class="label">Number of meetings</div>
+                <div class="content">6</div>
+              </div>
+              <div>
+                <div class="label">Position</div>
+                <div class="content">LG department of human resources, a personnel manager</div>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="cancelButton">
+              <div class="btn">CANCEL</div>
+            </div>
+            <div class="nextButton">
+              <div class="btn">NEXT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(".homeIcon").click(() => {
+        window.location.href = "/login";
+      });
+      $(".face1").click(() => {
+        $(".modal").removeClass("disable");
+      });
+      $(".blur").click(() => $(".modal").addClass("disable"));
+      $(".cancelButton").click(() => $(".modal").addClass("disable"));
+      $(".nextButton").click(() => (window.location.href = "/"));
+      $(".popup").click(e => e.stopPropagation());
+    </script>
   </body>
 </html>
