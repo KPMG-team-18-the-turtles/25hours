@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "DEBUG=25hours:* nodemon ./bin/www",
-    "start:win": "set DEBUG=25hours:* && nodemon ./bin/www"
+    "start:win": "set DEBUG=25hours:* && nodemon ./bin/www",
+    "start:prod": "DEBUG=25hours:* && pm2 start ./bin/www --log-date-format 'YYYY-MM-DD HH:mm Z'"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
