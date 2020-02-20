@@ -62,3 +62,6 @@ typings/
 
 # OS
 .DS_STORE
+
+# audio files
+uploads/
