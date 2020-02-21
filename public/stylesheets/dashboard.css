@@ -263,7 +263,7 @@ body {
       height: 290px;
       position: relative; }
       .container > .right .meetingList .deco {
-        left: 33px; }
+        left: 32px; }
       .container > .right .meetingList .frame {
         width: 94%;
         margin: 0 auto;
@@ -347,7 +347,7 @@ body {
 .deco {
   z-index: 999;
   position: absolute;
-  top: 33px;
+  top: 34px;
   left: 1px;
   width: 10px;
   height: 33px;

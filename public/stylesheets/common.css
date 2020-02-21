@@ -25,6 +25,12 @@ body {
 input {
   -webkit-border-radius: 0;
   border-radius: 0; }
+  input[type="checkbox"] {
+    padding: 1px !important;
+    border: 0.1px solid !important;
+    width: 4 !important;
+    height: 8px !important;
+    width: 8px !important; }
 
 .shadow {
   box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.3); }
