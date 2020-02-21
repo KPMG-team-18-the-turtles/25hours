@@ -1,7 +1,5 @@
 body {
   border-radius: 0 !important;
-  border-top-right-radius: 50px !important;
-  border-bottom-right-radius: 50px !important;
   background-color: #0173bb !important; }
 
 .container {
@@ -15,8 +13,6 @@ body {
   .container .left {
     flex: 2;
     text-align: center;
-    border-top-right-radius: 50px !important;
-    border-bottom-right-radius: 50px !important;
     background-color: white; }
     .container .left .logo {
       display: inline-block;
@@ -32,8 +28,8 @@ body {
       .container .left .menu .goToBack {
         cursor: pointer;
         background-color: #eef2f5;
-        border-bottom-right-radius: 20px;
-        border-top-right-radius: 20px;
+        border-bottom-right-radius: 40px;
+        border-top-right-radius: 40px;
         width: 90px;
         height: 50px;
         display: flex;
@@ -55,7 +51,7 @@ body {
         margin-left: 20px;
         width: 170px;
         height: 50px;
-        border-radius: 20px;
+        border-radius: 40px;
         display: flex;
         justify-content: center;
         align-items: center; }
@@ -80,8 +76,8 @@ body {
         margin: 10px;
         font-weight: bold; }
       .container .left .clientHead .faceImageFrame {
+        width: 200px;
         height: 200px;
-        width: 70%;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -109,7 +105,7 @@ body {
         height: 90%;
         padding: 20px;
         background-color: #eef2f5;
-        border-radius: 50px;
+        border-radius: 40px;
         display: flex;
         flex-wrap: wrap;
         position: relative; }
@@ -129,8 +125,6 @@ body {
               width: 100%;
               padding-bottom: 5px;
               padding-left: 20px; }
-        .container .left .clientBody .frame .wrapper:last-child > div {
-          height: 60px; }
   .container > .right {
     flex: 7;
     width: 100%; }
@@ -167,7 +161,7 @@ body {
               font-weight: bold;
               background-color: #65d6ce;
               color: black;
-              border-radius: 20px;
+              border-radius: 40px;
               padding: 10px;
               margin: 5px;
               margin-right: 15px; }
@@ -363,6 +357,11 @@ body {
   height: 100%;
   font-size: 24px;
   width: 100%;
+  cursor: pointer; }
+
+.shareIcon,
+.shareIcon2,
+.shareIcon3 {
   cursor: pointer; }
 
 /*# sourceMappingURL=dashboard.css.map */

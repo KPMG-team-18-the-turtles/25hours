@@ -144,7 +144,7 @@ body {
             button#loginBtn {
               width: 150px;
               height: 150px;
-              border-radius: 30px;
+              border-radius: 40px;
               font-size: 1.4rem;
               color: white;
               background-color: $color-green;
@@ -156,7 +156,7 @@ body {
             #unlockBtn {
               width: 150px;
               height: 40px;
-              border-radius: 30px;
+              border-radius: 40px;
               font-size: 1rem;
               line-height: 42px;
               text-align: center;
@@ -279,14 +279,14 @@ body {
   }
   > .content {
     .left {
-      border-top-left-radius: 70px;
+      border-top-left-radius: 40px;
     }
     > .right > .title {
-      border-top-right-radius: 70px;
+      border-top-right-radius: 40px;
     }
   }
   > .footer {
-    border-bottom-left-radius: 70px;
-    border-bottom-right-radius: 70px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
   }
 }

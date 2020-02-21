@@ -101,7 +101,7 @@
           .container .content > .right .login form .right button#loginBtn {
             width: 150px;
             height: 150px;
-            border-radius: 30px;
+            border-radius: 40px;
             font-size: 1.4rem;
             color: white;
             background-color: #00aca6;
@@ -111,7 +111,7 @@
           .container .content > .right .login form .right #unlockBtn {
             width: 150px;
             height: 40px;
-            border-radius: 30px;
+            border-radius: 40px;
             font-size: 1rem;
             line-height: 42px;
             text-align: center;
@@ -201,11 +201,11 @@
   .container .whiteBg {
     background-color: white; }
   .container > .content .left {
-    border-top-left-radius: 70px; }
+    border-top-left-radius: 40px; }
   .container > .content > .right > .title {
-    border-top-right-radius: 70px; }
+    border-top-right-radius: 40px; }
   .container > .footer {
-    border-bottom-left-radius: 70px;
-    border-bottom-right-radius: 70px; }
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px; }
 
 /*# sourceMappingURL=login.css.map */

@@ -19,8 +19,7 @@ html {
   background-color: white; }
 
 body {
-  background-color: #0173bb;
-  border-radius: 70px; }
+  background-color: #0173bb; }
 
 input {
   -webkit-border-radius: 0;
@@ -30,7 +29,8 @@ input {
     border: 0.1px solid !important;
     width: 4px !important;
     height: 8px !important;
-    width: 8px !important; }
+    width: 8px !important;
+    margin-right: 10px !important; }
 
 .shadow {
   box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.3); }

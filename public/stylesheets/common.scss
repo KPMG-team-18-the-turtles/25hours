@@ -22,7 +22,7 @@ html {
 }
 body {
   background-color: $color-blue;
-  border-radius: 70px;
+  // border-radius: 70px;
 }
 input {
   -webkit-border-radius: 0;
@@ -33,6 +33,7 @@ input {
     width: 4px !important;
     height: 8px !important;
     width: 8px !important;
+    margin-right: 10px !important;
   }
 }
 .shadow {
@@ -44,4 +45,8 @@ input[type="text"]:focus {
 // temp
 body {
   // border: 1px red dotted;
+}
+
+* {
+  // border-radius: 0 !important;
 }
