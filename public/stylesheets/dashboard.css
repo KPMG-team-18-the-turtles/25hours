@@ -316,7 +316,7 @@ body {
                   cursor: pointer; }
                 .container > .right .meetingList .frame .inner .meetings table tr .scriptIcon {
                   background-image: url("/images/icon_script.png");
-                  background-size: 25px;
+                  background-size: 60%;
                   cursor: pointer; }
   .container .shareIcon {
     z-index: 999;
@@ -363,5 +363,13 @@ body {
 .shareIcon2,
 .shareIcon3 {
   cursor: pointer; }
+
+.meetings td:first-child {
+  cursor: pointer; }
+  .meetings td:first-child:hover {
+    background-color: rgba(0, 0, 0, 0.1); }
+
+.meetings tr:first-child td:first-child {
+  cursor: auto !important; }
 
 /*# sourceMappingURL=dashboard.css.map */

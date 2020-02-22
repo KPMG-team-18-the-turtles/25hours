@@ -8,6 +8,7 @@
     "start:prod": "DEBUG=25hours:* && pm2 start ./bin/www --log-date-format 'YYYY-MM-DD HH:mm Z'"
   },
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",

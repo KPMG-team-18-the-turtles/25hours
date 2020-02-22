@@ -397,7 +397,7 @@ body {
                 }
                 .scriptIcon {
                   background-image: url("/images/icon_script.png");
-                  background-size: 25px;
+                  background-size: 60%;
                   cursor: pointer;
                 }
                 // .downloadIcon {
@@ -461,4 +461,13 @@ body {
 .shareIcon2,
 .shareIcon3 {
   cursor: pointer;
+}
+.meetings td:first-child {
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(black, 0.1);
+  }
+}
+.meetings tr:first-child td:first-child {
+  cursor: auto !important;
 }

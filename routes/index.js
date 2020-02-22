@@ -3,8 +3,10 @@ const { uuid } = require("uuidv4");
 const UserLogic = require("../logic/user");
 const multer = require("multer");
 const upload = multer({ dest: "uploads/" });
+const ffmpegInstaller = require("@ffmpeg-installer/ffmpeg");
 const ffmpeg = require("fluent-ffmpeg");
 const path = require("path");
+ffmpeg.setFfmpegPath(ffmpegInstaller.path);
 
 const router = express.Router();
 

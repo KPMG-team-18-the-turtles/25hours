@@ -29,7 +29,10 @@
           </div>
         </div>
         <div class="clientBody">
-          <div class="shareIcon"></div>
+          <div
+            class="shareIcon"
+            onclick="javascript: window.location.href='mailto:sm5204@kpmg.com?subject=요청하신 내용 공유드립니다&body=이 내용은 25HOURS 앱에서 공유되었습니다. %0D%0A이름 : Meg Fletcher%0D%0A연락처 : 010-0472-6945%0D%0A이메일 : reagreh42@gmail.com%0D%0A최근 미팅일자 : 2020/02/16%0D%0A회사 : LG Electronics%0D%0A직책 : Senior digital manager%0A------------------------%0A';"
+          ></div>
           <div class="frame">
             <div class="deco"></div>
             <div class="wrapper">
@@ -66,8 +69,8 @@
               <div class="deco"></div>
               <div class="shareIcon2"></div>
               <div class="title">Keywords</div>
-              <div class="keywords">
-                <span class="keyword">facilities for communication</span>
+              <div class="keywords" id="keywords">
+                <!-- <span class="keyword">facilities for communication</span>
                 <span class="keyword">budget consultation</span>
                 <span class="keyword">Register for the establishment</span>
                 <span class="keyword">nonprofit organization</span>
@@ -76,7 +79,7 @@
                 <span class="keyword">facilities for communication</span>
                 <span class="keyword">communication</span>
                 <span class="keyword">facilities for communication</span>
-                <span class="keyword">Checking records</span>
+                <span class="keyword">Checking records</span> -->
               </div>
             </div>
             <div class="frame">
@@ -85,10 +88,19 @@
               <div class="title">Summary</div>
 
               <div class="sentences">
-                <div class="sentencesDesc">
-                  <div class="sentence">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium</div>
-                  <div class="sentence">aliquam culpa omnis architecto quis dolores doloremque veniam perspiciatis aliquam culpa omnis architecto quis dolores doloremque veniam perspiciatis</div>
-                  <div class="sentence">repellat velit eligendi hic quae exercitationem ad quam ipsum facilis. aliquam culpa omnis architecto quis dolores doloremque veniam perspiciatis</div>
+                <div class="sentencesDesc" id="sentences">
+                  <!-- <div class="sentence">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Explicabo, laudantium
+                  </div>
+                  <div class="sentence">
+                    aliquam culpa omnis architecto quis dolores doloremque veniam perspiciatis aliquam culpa omnis architecto quis dolores doloremque veniam
+                    perspiciatis
+                  </div>
+                  <div class="sentence">
+                    repellat velit eligendi hic quae exercitationem ad quam ipsum facilis. aliquam culpa omnis architecto quis dolores doloremque veniam
+                    perspiciatis
+                  </div> -->
                 </div>
                 <div class="dots"></div>
                 <!-- <div class="sentenceGood">
@@ -207,7 +219,6 @@
         </div>
       </div>
     </div>
-    <a href="mailto:no-one@snai1mai1.com?subject=look at this website&body=Hi,I found this website and thought you might like it http://www.geocities.com/wowhtml/">tell a friend</a>
 
     <script>
       const recorder = document.getElementsByClassName("recordButton")[0];
@@ -239,9 +250,69 @@
     <script>
       $(".goToBack").click(() => (window.location.href = "clients"));
     </script>
+    <script>
+      keywords_a = [
+        "1facilities for communication",
+        "1budget consultation",
+        "2Register for the establishment",
+        "2nonprofit organization",
+        "1Checking records",
+        "2facilities for communication",
+        "1facilities for communication",
+        "2communication",
+        "1facilities for communication",
+        "2communication"
+      ];
+      keywords_b = [
+        "4facilities for communication",
+        "4budget consultation",
+        "4Register for the establishment",
+        "4nonprofit organization",
+        "4Checking records",
+        "4facilities for communication",
+        "4facilities for communication",
+        "4communication",
+        "4facilities for communication",
+        "4communication"
+      ];
+      sentences_a = [
+        "1Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium",
+        "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium",
+        "3Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium"
+      ];
+      sentences_b = [
+        "4Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium",
+        "4Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium",
+        "4Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium"
+      ];
+      b = keywords_a.map(e => `<span class="keyword">${e}</span>`);
+      c = $("#keywords")
+        .empty()
+        .append(b);
+      b = sentences_a.map(e => `<div class="sentence">${e}</div>`);
+      c = $("#sentences")
+        .empty()
+        .append(b);
+      $("div.meetings > table > tbody tr:nth-child(2) td:first-child").click(() => {
+        b = keywords_a.map(e => `<span class="keyword">${e}</span>`);
+        c = $("#keywords")
+          .empty()
+          .append(b);
+        b = sentences_a.map(e => `<div class="sentence">${e}</div>`);
+        c = $("#sentences")
+          .empty()
+          .append(b);
+      });
+      $("div.meetings > table > tbody tr:nth-child(3) td:first-child").click(() => {
+        b = keywords_b.map(e => `<span class="keyword">${e}</span>`);
+        c = $("#keywords")
+          .empty()
+          .append(b);
+        b = sentences_b.map(e => `<div class="sentence">${e}</div>`);
+        c = $("#sentences")
+          .empty()
+          .append(b);
+      });
+    </script>
   </body>
 </html>
-
-<!-- 타원 원으로 -->
-<!-- 스크립트 삭제 버튼 -->
-<!-- 스크립트 세개로 -->
