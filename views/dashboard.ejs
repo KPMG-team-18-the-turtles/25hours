@@ -123,23 +123,23 @@
                 <div class="wrapper">
                   <div>
                     <input type="checkbox" />
-                    <input type="text" value="계약사항 6번 재확인" />
+                    <input type="text" value="수상 경력 확인" />
                   </div>
                   <div>
                     <input type="checkbox" />
-                    <input type="text" value="거래 절차 확인" />
+                    <input type="text" value="경력 레퍼런스 체크" />
                   </div>
                   <div>
                     <input type="checkbox" />
-                    <input type="text" value="수주 금액 확인" />
+                    <input type="text" value="추천서" />
                   </div>
                   <div>
                     <input type="checkbox" />
-                    <input type="text" value="고객 골프 안부 묻기" />
+                    <input type="text" value="영어 성적" />
                   </div>
                   <div>
                     <input type="checkbox" />
-                    <input type="text" value="재계약확인" />
+                    <input type="text" value="최종 발표일 재확인" />
                   </div>
                   <div>
                     <input type="checkbox" />
@@ -251,39 +251,19 @@
       $(".goToBack").click(() => (window.location.href = "clients"));
     </script>
     <script>
-      keywords_a = [
-        "1facilities for communication",
-        "1budget consultation",
-        "2Register for the establishment",
-        "2nonprofit organization",
-        "1Checking records",
-        "2facilities for communication",
-        "1facilities for communication",
-        "2communication",
-        "1facilities for communication",
-        "2communication"
-      ];
-      keywords_b = [
-        "4facilities for communication",
-        "4budget consultation",
-        "4Register for the establishment",
-        "4nonprofit organization",
-        "4Checking records",
-        "4facilities for communication",
-        "4facilities for communication",
-        "4communication",
-        "4facilities for communication",
-        "4communication"
-      ];
+      keywords_a = ["Global branch", "Reshuffling", "Selection", "Achievements", "Application Forms", "Work blank", "English ability", "capability"];
+      keywords_b = ["Referrals", "interview status", "English scores", "waiting numbers", "English interviews"];
       sentences_a = [
-        "1Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium",
-        "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium",
-        "3Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium"
+        `"Receiving application for the number prediction"`,
+        `"Selecting after evaluating the work performance"`,
+        `"Recommendation from each departments"`,
+        `"Proof of English ability(TOEFL, IELTS)"`
       ];
       sentences_b = [
-        "4Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium",
-        "4Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium",
-        "4Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, laudantium"
+        `"Recommend personnel from each headquarters 3 people"`,
+        `"1 person should be on the waiting list"`,
+        `"3 additional interviews will be held after the receving the referrals"`,
+        `"First Interview should be held in English"`
       ];
       b = keywords_a.map(e => `<span class="keyword">${e}</span>`);
       c = $("#keywords")
